@@ -28,7 +28,7 @@ class SwiperClass {
             // , effect: 'cube'
 
             // slide 시작 위치
-            , initialSlide: 2
+            , initialSlide: 0
 
             // 슬라이드 간격
             , spaceBetween:500
@@ -50,6 +50,12 @@ class SwiperClass {
             console.log('slideChangeTransitionStart');
             const idx = this.mySwiper.activeIndex;
             console.log($(this.mySwiper.slides[idx]), '> $(this.mySwiper.slides[idx])', idx, '> idx');
+
+
+            let $nowSlide = $(this.mySwiper.slides[idx]);
+            console.log($($nowSlide).data(), '> $($nowSlide).data()')
+
+
         });
 
         this.mySwiper.on('slideChangeTransitionEnd', function () {
